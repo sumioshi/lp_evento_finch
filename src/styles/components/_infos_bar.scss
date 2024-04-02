@@ -2,21 +2,26 @@
 
 .infos-bar {
     padding: 16px 24px;
-    background-color: variables.$textColor;
+    background-color: variables.$infoBarColor;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.50);
     width: 100%; 
     display: flex;
     justify-content: space-between;
 
     &__infos {
         display: flex;
-        gap: 40px;
+        gap: 250px;
 
         &__item {
             font-size: 14px;
-            color: variables.$secondaryTextColor;
+            color: variables.$textColor;
 
             b {
-                color: variables.$secondaryTextColor;
+                color: variables.$textColor;
                 font-size: 18px;
                 display: block;
             }
@@ -37,8 +42,21 @@
 
     @media (max-width: 1024px) {
         &__infos {
-            gap: 16px;
+            gap: 70px;
         }
     }
+
+    @media only screen and (min-width: 640px) and (max-width: 1200px) {
+        &__infos {
+            display: flex;
+            gap: 190px;
+    
+            &__item {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+
 
 }

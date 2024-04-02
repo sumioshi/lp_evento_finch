@@ -3,45 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBAC Tech Talks</title>
+    <title>OUTLIER EXPERIENCE | DO ROTEIRO ÀS TELAS</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.scss">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <header class="hero">
+        <div class="video-container">
+            <div class="overflow">
+                <div class="vsc-controller">
+            <video id="background-video" autoplay loop playsiline muted>
+                <source src="../video/video.mp4" type="video/mp4">
+            </video>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
-            <img class="hero__logo" src="./images/ebac_logo.svg" alt="EBAC">
+            <img class="hero__logo" src="./images/outlier.png" alt="EBAC">
             <p class="hero__text">
-                O maior evento de tecnologia do Brasil começa em <span id="contador">10d 12h 20m 15s</span>
+                <span class="hero__tag">DO ROTEIRO AS TELAS</span> <br>
+                o primeiro evento presencial da Ticto e Thiago Finch <span id="contador">10d 12h 20m 15s</span>
+                <div class="container-btn">
+                    <div class="btn" id="openModal"><a href="#">
+                        <img src="/src/images/circle-play.svg" alt="Play">
+                    </a>
+                    </div>
+                </div>
             </p>
         </div>
-        <div class="container"> <!-- Adicione a classe container aqui -->
-            <div class="infos-bar"> <!-- Adicione a classe container aqui -->
+
+        <div id="videoModal" class="modal">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-content">
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/927557139?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="video"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"> 
+            
+            <div class="infos-bar"> 
                 <ul class="infos-bar__infos">
                     <li class="infos-bar__infos__item">
                         <b>Localização</b>
-                        Rua Afonso Conte, Hamada - Brasil
+                        Teatro Anhembi - São Paulo
                     </li>
                     <li class="infos-bar__infos__item">
                         <b>Preço</b>
-                        A partir de R$120,00
+                        A partir de ...
                     </li>
                     <li class="infos-bar__infos__item">
                         <b>Quando</b>
-                        22/12/2024 às 19hrs
+                        29 e 30 de junho.
                     </li>
-                </ul>
-                <a href="#" class="button button--primary">
-                    Garanta sua vaga
-                </a>
+                </ul>           
             </div>
         </div>
     </header>
-
     <section class="event event--frontend" >
         <div class="container" data-aos="fade-right">
             <div class="event__details">

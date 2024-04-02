@@ -1,6 +1,6 @@
 AOS.init();
 
-const dataDoEvento = new Date("Dec 12, 2024 19:00:00");
+const dataDoEvento = new Date("Jun 29, 2024 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
 const contaAsHoras = setInterval(function() {
@@ -30,3 +30,15 @@ const contaAsHoras = setInterval(function() {
         document.getElementById('contador').innerHTML = 'Evento expirado'
     }
 }, 1000);
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Abrir popup ao clicar no botão
+    document.getElementById("openModal").addEventListener("click", function() {
+        document.getElementById("videoModal").style.display = "block";
+    });
+
+    // Fechar popup ao clicar no botão de fechar
+    document.getElementById("closeModal").addEventListener("click", function() {
+        document.getElementById("videoModal").style.display = "none";
+    });
+});
