@@ -116,7 +116,6 @@
 	}
 }
 
-/* Estilo para o popup */
 .modal {
     display: none;
     position: fixed;
@@ -143,6 +142,27 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+#closeModal {
+    position: absolute; /* Define a posição absoluta para o botão */
+    top: 10%;
+    right: calc((100vw - 1366px) / 2 + 660px); /* Define a distância da direita do modal */
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1366px) {
+    #closeModal {
+        top: 8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #closeModal {
+        top: 5%;
+    }
 }
 
 .close:hover,
